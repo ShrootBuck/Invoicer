@@ -26,6 +26,12 @@ export default async function RootLayout({
         lang="en"
         className={`${GeistSans.variable} bg-background text-foreground dark`}
       >
+        <head>
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+        </head>
         <body>
           <NextUIProvider>
             <TRPCReactProvider>
