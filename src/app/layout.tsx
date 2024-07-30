@@ -35,6 +35,7 @@ export default async function RootLayout({
         <body>
           <NextUIProvider>
             <TRPCReactProvider>
+              {/* Enter session */}
               {session ? (
                 <>
                   <CustomNavbar />
