@@ -25,8 +25,9 @@ model Invoice {
 model TimeLog {
     id        Int      @id @default(autoincrement())
     startTime DateTime
-    endTime   DateTime @default(now()) // I guess this might be useful for the less productive of us
-    Invoice   Invoice? @relation(fields: [id], references: [id])
+    endTime   DateTime @default(now())
+    invoice   Invoice  @relation(fields: [invoiceId], references: [id])
+    invoiceId Int
 }
 
 // Necessary for Next auth
